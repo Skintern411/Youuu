@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #000000;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .message {
+            line-height: 1.8;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255,107,107,0.1);
+        }
+
+        .message.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, #ff0844, #ffb199);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        .image-container {
+            width: 100%;
+            margin: 30px 0;
+            overflow: hidden;
+            border-radius: 15px;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 1s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .image-container.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        h1 {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.8rem;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 1s ease;
+            text-shadow: 0 0 30px rgba(255,107,107,0.2);
+        }
+
+        h1.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            font-style: italic;
+            opacity: 0;
+            transition: all 0.8s ease;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .signature.visible {
+            opacity: 1;
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-style: italic;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                margin: 20px auto;
+            }
+
+            .section {
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .message {
+                font-size: 1.1rem;
+            }
+
+            .image-container {
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To The Most Special Person...</h1>
+
+        <div class="section">
+            <p class="message">Heyyyyyyyyy, I know you're hurt, and I completely understand why. I messed up by not responding to your messages, and I want to explain what happened.</p>
+            <div class="image-container">
+                <img src="images\1.jpg" alt="You Smiling" class="image">
+            </div>
+            <p class="image-caption">That beautiful smile of yours twhich I don't want to fade because of my mistakes</p>
+        </div>
+
+        <div class="section">
+            <p class="message">When you texted, I thought you were in class and wanted to wait until you were free to have a proper conversation.</p>
+            <p class="message">I wanted to give you my full attention, just like you deserve.</p>
+            <div class="image-container">
+                <img src="images\6.jpg" alt="You Thinking Something" class="image">
+            </div>
+            <p class="image-caption">The way you look when you're doing what you love</p>
+        </div>
+
+        <div class="section">
+            <p class="message">I got caught up in the cricket match and then a call from Nazneen. These aren't excuses - they're mistakes I made that hurt you.</p>
+            <p class="message">I should have prioritized what matters most - you.</p>
+            <div class="image-container">
+                <img src="images\3.jpg" alt="We together" class="image">
+            </div>
+            <p class="image-caption">One of my happiest moments together</p>
+        </div>
+
+        <div class="section">
+            <p class="message">Your messages and your feelings are important to me. I should have responded right away.</p>
+            <p class="message">I'm truly sorry for hurting you. You mean so much to me, and the last thing I ever want to do is make you feel unimportant.</p>
+            <p class="message">Because you are <span class="highlight">the most important person</span> in my life.</p>
+            <div class="image-container">
+                <img src="images\2.jpeg" alt="You...." class="image">
+            </div>
+            <p class="image-caption">The most wonderful and lovely person, inside and out</p>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <img src="images\5.png" alt="You and Your flower" class="image">
+            </div>
+            <p class="image-caption">BTW, you and your flower always makes the good pair</p>
+            <p class="signature">I am Sorry if I hurt you</p>
+            
+
+        </div>
+
+        <div class="section">
+            <p class="signature">❤️❤️❤️❤️....With all my heart...❤️❤️❤️❤️</p>
+        </div>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    if (entry.target.classList.contains('section')) {
+                        const messages = entry.target.querySelectorAll('.message');
+                        const image = entry.target.querySelector('.image-container');
+                        const caption = entry.target.querySelector('.image-caption');
+                        const signature = entry.target.querySelector('.signature');
+                        
+                        messages.forEach((message, index) => {
+                            setTimeout(() => {
+                                message.classList.add('visible');
+                            }, index * 600);
+                        });
+
+                        if (image) {
+                            setTimeout(() => {
+                                image.classList.add('visible');
+                            }, messages.length * 600);
+                        }
+
+                        if (caption) {
+                            setTimeout(() => {
+                                caption.classList.add('visible');
+                            }, (messages.length + 1) * 600);
+                        }
+
+                        if (signature) {
+                            setTimeout(() => {
+                                signature.classList.add('visible');
+                            }, (messages.length + 2) * 600);
+                        }
+                    }
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        document.querySelectorAll('.section, h1').forEach(element => {
+            observer.observe(element);
+        });
+
+        setTimeout(() => {
+            document.querySelector('h1').classList.add('visible');
+        }, 500);
+    </script>
+</body>
+</html>
